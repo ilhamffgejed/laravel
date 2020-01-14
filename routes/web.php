@@ -15,7 +15,7 @@ use App\Olahrga;
 
 Route::get('/', function () {
     //return 'ahaha';
-    return Buku::all();
+return Buku::all(/*'judul','jumlah_halaman','penerbit'*/);
     return Olahraga::all();
 });
 
@@ -49,7 +49,7 @@ Route::get('variabel', function () {
     $data3= 'ini data tiga';
     $data4= 'ini data empat';
     $data5= 'ini data lima';
- 
+
     return $data1.'<br>'.$data2.'<br>'.$data3.'<br>'.$data4.'<br>'.$data5;
 });
 
@@ -85,3 +85,30 @@ Route::get('siswa/{nama}/{nilai?}', function($nama,$nilai='Blum Mengisi Nilai'){
     else $grade = ' Tidak Mendapat Grade';
      return 'Halo '.$nama.'<br>'. ' Nilai Anda = ' . $nilai . '<br>' . ' Maka Grade Anda =' . $grade;
 });
+
+
+Route::get('contoh', 'ContohController@latihan');
+Route::get('profil', 'ContohController@latihan2');
+Route::get('profil2', 'ContohController@latihan3');
+Route::get('profil3', 'ContohController@latihan4');
+
+Route::get('Profil', 'ProfilController@ofil');
+
+Route::get('menu/{mkn}','ContohController@menu');
+
+Route::get('menu2/{mkn?}/{minum?}/{ukuran?}','ContohController@menu2');
+
+
+Route::get('hitungbuku','BukuController@hitungbuku');
+// Route::get('show','BukuController@show');
+// Route::get('buatdata','BukuController@buatdata');
+
+Route::get('get-buku','BukuController@index');
+Route::get('create-buku','BukuController@buatdata');
+Route::get('get-buku/{id}','BukuController@show');
+Route::get('delete-buku/{id}','BukuController@delete');
+Route::get('update-buku/{id}','BukuController@update');
+Route::get('buatdata','BukuController@buatdata');
+
+
+

@@ -3,7 +3,7 @@
 use App\Buku;
 use Illuminate\Database\Seeder;
 
-class Buku_seeder extends Seeder
+class BukuSeeder extends Seeder
 {
     /**
      * Run the database seeds.
