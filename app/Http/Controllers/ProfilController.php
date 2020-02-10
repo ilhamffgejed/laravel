@@ -17,7 +17,7 @@ class ProfilController extends Controller
         $h = 'Main Game aNd sleeP';
         $i = '17 tahun';
 
-        return view('profil', ['nama' => $a,'agama'=>$b,'jk'=>$c
+        return view('biodata', ['nama' => $a,'agama'=>$b,'jk'=>$c
                             ,'alamat'=>$d,'sekolah'=>$e,'kelas'=>$f
                             ,'jurusan'=>$g,'hobi'=>$h,'umur'=>$i]);
     }
